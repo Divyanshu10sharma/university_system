@@ -14,7 +14,7 @@ const FormPage = () => {
   const [rollNumber, setRollNumber] = useState("");
   const [branch, setBranch] = useState("");
   const [year, setYear] = useState("");
-  const [email, setEmail] = useState(""); // Will be pre-filled
+  const [email, setEmail] = useState(""); 
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -74,7 +74,6 @@ const FormPage = () => {
             />
           </div>
 
-          {/* Roll Number Field */}
           <div className="flex items-center gap-4">
             <FaRegEnvelope className="text-2xl text-white" />
             <input
@@ -87,7 +86,6 @@ const FormPage = () => {
             />
           </div>
 
-          {/* Email Field (Pre-filled) */}
           <div className="flex items-center gap-4">
             <FaRegEnvelope className="text-2xl text-white" />
             <input
@@ -98,7 +96,6 @@ const FormPage = () => {
             />
           </div>
 
-          {/* Branch Dropdown */}
           <div className="flex items-center gap-4">
             <FaUniversity className="text-2xl text-white" />
             <select
@@ -115,7 +112,6 @@ const FormPage = () => {
             </select>
           </div>
 
-          {/* Year Dropdown */}
           <div className="flex items-center gap-4">
             <FaUniversity className="text-2xl text-white" />
             <select
@@ -132,7 +128,6 @@ const FormPage = () => {
             </select>
           </div>
 
-          {/* Submit Button */}
           <div className="flex justify-center">
             <button
               type="submit"
