@@ -18,14 +18,13 @@ const FormPage = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    // Fetch user data after login to pre-fill the form
+    
     if (auth.currentUser) {
       setEmail(auth.currentUser.email);
       setName(auth.currentUser.displayName || "");
     }
   }, []);
 
-  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -41,7 +40,6 @@ const FormPage = () => {
         createdAt: new Date(),
       };
 
-      // Save user data to Firestore in 'students' collection
       await setDoc(doc(db, "students", auth.currentUser.uid), userData);
       router.push("/main"); // Redirect to main screen after submission
     } catch (error) {
